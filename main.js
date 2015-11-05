@@ -20,6 +20,8 @@
                 var t = event.target;
                 if(t.hasAttributes('data-dblclick')){
                     t.classList.toggle(t.getAttribute('data-dblclick'));
+                    window.getSelection().removeAllRanges();
+
                 }else {
                     return;
                 }
