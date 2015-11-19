@@ -1,8 +1,61 @@
+*{
+    transition: .4s;
+    box-sizing: border-box;
+}
+div{
+   border: 1px solid #111;
+    line-height: 3;
+    width: 300px;
+}
+.wrapper{
+    width: 100%;
+    border: none;
+}
+.wrapper:after {
+    content:"";
+    display:table;
+    clear:both;
 
-.red{
-    background: red;
+}
+.class1{
+    height: 100px;
+    margin-top: -100px;
+    background: blanchedalmond;
+    opacity: 0;
 }
 
-.blue{
-    background: blue;
+.click .class1{
+    margin-top: 0px;
+    opacity: 1;
+}
+.class2{
+    position: absolute;
+    top: -100px;
+    left: 300px;
+    background: forestgreen;
+}
+.dblclick .class2{
+    top: 100px;
+}
+
+.class3{
+    height: 100px;
+    width: 300px;
+    background: palegreen;
+}
+.hover .class3{
+    height: 300px;
+    width: 100px;
+    background: fuchsia;
+}
+.btn{
+    float: left;
+    width: 40%;
+    border: none;
+}
+.container{
+    float: right;
+    width: 60%;
+    position: relative;
+    border: none;
 }

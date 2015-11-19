@@ -2,12 +2,26 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Svg speed</title>
+    <title>Data add class</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div data-click='red' data-dblclick='blue'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure perferendis quidem ullam! Deserunt dolores enim neque quae quas, quisquam rem sed vitae. A enim, fugit. Dolorem excepturi hic quidem quo.</div>
+<div class="wrapper">
+    <div class="btn">
+        <div data-click='click'>data-click='click'</div>
+        <div data-dblclick='dblclick'>data-dblclick='dblclick'</div>
+        <div data-hover='hover'>data-hover='hover'</div>
+    </div>
+    <div class="container">
+        <div class="class1">click</div>
+        <div class="class2">dblclick</div>
+        <div class="class3">hover</div>
+    </div>
 
-<script src="main.js"></script>
+</div>
+<script src="dataAddClass.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', dataAddClassBody);
+</script>
 </body>
 </html>
