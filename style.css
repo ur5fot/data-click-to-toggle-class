@@ -31,7 +31,7 @@ div{
 .class2{
     position: absolute;
     top: -100px;
-    left: 300px;
+    left: 100px;
     background: forestgreen;
 }
 .dblclick .class2{

@@ -1,7 +1,3 @@
-/**
- * Created by ur5fot on 05.11.15.
- */
-
 function dataAddClassBody() {
     'use strict';
 
@@ -13,7 +9,7 @@ function dataAddClassBody() {
         if (t.hasAttribute('data-click')) {
             document.body.classList.toggle(t.getAttribute('data-click'));
         } else {
-            return;
+            //return;
         }
     }
 
@@ -23,7 +19,7 @@ function dataAddClassBody() {
             document.body.classList.toggle(t.getAttribute('data-dblclick'));
             window.getSelection().removeAllRanges();
         } else {
-            return;
+            //return;
         }
     }
 
@@ -31,28 +27,29 @@ function dataAddClassBody() {
     var hover = null;
     function hoverAddClass(e) {
         var t = e.target;
+        //цыкл выполняется если t есть и пока нестанет не дойдет до HTML и пока hover = null
         while (t && t !== document.documentElement && !hover) {
-            if (t.hasAttribute('data-hover')) {
-                document.body.classList.add(t.getAttribute('data-hover'));
-                hover = t;
-
+            if (t.hasAttribute('data-hover')) { //если нашли родителя с атребутом data-hover
+                document.body.classList.add(t.getAttribute('data-hover')); //доавили класс body
+                hover = t; // и запомнили его
             }
 
-            t = t.parentNode;
+            t = t.parentNode; //перешли на родителя выше в остальных случаях
         }
-        return
+        //return
     }
+
     document.addEventListener('mouseout', hoverRemoveClass);
     function hoverRemoveClass(e) {
-        var rt = e.target;
-        while (rt && rt  !== document.documentElement  && hover ) {
-            if (rt === hover ) {
+        var t = e.target;
+        while (t && t  !== document.documentElement  && hover ) {
+            if (t === hover ) {
                 document.body.classList.remove(hover.getAttribute('data-hover'));
                 hover = null;
             }
-            rt = rt.parentNode;
+            t = t.parentNode;
         }
-        return;
+        //return;
 
 
     }
